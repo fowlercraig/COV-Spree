@@ -1,0 +1,59 @@
+#cart--menu {
+
+  z-index: 99;
+
+  #cart--toggle {
+
+    position: relative;
+    z-index: 2;
+    background: @bgGray;
+    display: block;
+    width: 100%;
+    height: @height;
+    line-height: @height;
+
+    &.fs-swap-active {
+      color: red;
+      background: none;
+    }
+
+  }
+
+}
+
+#cart--holder {
+
+  background: @white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  .shadow();
+  padding: @spaced;
+
+  &.fs-swap-enabled.fs-swap-target {
+    display: none;
+    transition:300ms ease;
+  }
+
+  &.fs-swap-enabled.fs-swap-active {
+    display: block;
+  }
+
+  @media @min {
+    width: 320px
+  }
+
+  @media @tablet {
+    width: 400px;
+  }
+
+  @media @desktop {
+    width: 400px;
+  }
+
+  .empty {
+    margin-bottom: 0;
+  }
+
+}

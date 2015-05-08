@@ -1,0 +1,32 @@
+#filters {
+
+  .button {
+
+    margin-bottom: 0;
+    color: @textGray;
+    height: @height;
+    line-height: @height;
+
+    &:before {
+      content: '';
+      height: 6px;
+      width: 6px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 7px;
+      background: @bgGray;
+      margin-bottom: 1px;
+      .transition();
+    }
+
+    &.is-checked {
+
+      &:before {
+        background: @black75;
+      }
+
+    }
+
+  }
+
+}
